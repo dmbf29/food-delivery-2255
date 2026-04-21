@@ -14,6 +14,13 @@ class EmployeeRepository
     end
   end
 
+  def find(id)
+    # searching for the employee that match the id given to it
+    @employee.find do |employee|
+      employee.id = id
+    end
+  end
+
   # CRUD
 
 

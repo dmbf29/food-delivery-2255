@@ -20,6 +20,13 @@ class CustomerRepository
     save_csv
   end
 
+  def find(id)
+    # searching for the customer that match the id given to it
+    @customer.find do |customer|
+      customer.id = id
+    end
+  end
+
   private
 
   def load_csv

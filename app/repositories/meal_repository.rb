@@ -20,6 +20,13 @@ class MealRepository
     save_csv
   end
 
+  def find(id)
+    # searching for the meal that match the id given to it
+    @meal.find do |meal|
+      meal.id = id
+    end
+  end
+
   private
 
   def load_csv
