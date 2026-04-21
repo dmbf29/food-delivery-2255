@@ -22,8 +22,8 @@ class MealRepository
 
   def find(id)
     # searching for the meal that match the id given to it
-    @meal.find do |meal|
-      meal.id = id
+    @meals.find do |meal|
+      meal.id == id
     end
   end
 

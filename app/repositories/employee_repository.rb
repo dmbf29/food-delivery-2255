@@ -16,8 +16,14 @@ class EmployeeRepository
 
   def find(id)
     # searching for the employee that match the id given to it
-    @employee.find do |employee|
-      employee.id = id
+    @employees.find do |employee|
+      employee.id == id
+    end
+  end
+
+  def all_riders
+    @employees.select do |employee|
+      employee.rider?
     end
   end
 

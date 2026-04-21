@@ -22,10 +22,13 @@ class CustomerRepository
 
   def find(id)
     # searching for the customer that match the id given to it
-    @customer.find do |customer|
-      customer.id = id
+    @customers.find do |customer|
+      customer.id == id
     end
   end
+
+  # = assignment
+  # == comparison
 
   private
 
